@@ -1,0 +1,18 @@
+-s TIMbarrel_centroid_backbone.pdb
+-remodel:blueprint TIMbarrel_centroid_backbone.bp
+-jd2:no_output
+-overwrite
+-remodel:RemodelLoopMover:cyclic_peptide
+-hb_lrbb 2.0 
+-randomize_loops false
+-bypass_fragments
+-bypass_closure
+-remodel:use_pose_relax
+-remodel:dr_cycles 3
+-soft_rep_design
+-no_optH false
+-ex1
+-ex2
+-linmem_ig 10
+-num_trajectory 1
+-save_top 1

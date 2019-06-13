@@ -1,0 +1,2 @@
+# search loop length;
+remodel.mpi.macosclangrelease -s 1ap2.pdb -remodel:blueprint link2.remodel -run:chain A -remodel:num_trajectory 2 -remodel:quick_and_dirty -no_jumps

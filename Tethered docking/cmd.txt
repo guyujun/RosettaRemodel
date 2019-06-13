@@ -1,0 +1,17 @@
+# 初始迭代
+$ROSETTA/tools/remodel/getBluePrintFromCoords.pl -pdbfile 1pga.pdb -chain A > blueprint.remodel
+
+mpirun -np 4 remodel.mpi.macosclangrelease -s 1pga.pdb \
+-remodel:blueprint blueprint.remodel \
+-run:chain A -remodel:num_trajectory 10 \
+-remodel:quick_and_dirty \
+-remodel:RemodelLoopMover:bypass_closure
+-remodel:RemodelLoopMover:force_cutting_N
+
+# 第二次闭环, 选取第四号作为出发。
+$ROSETTA/tools/remodel/getBluePrintFromCoords.pl -pdbfile 4.pdb -chain A > blueprint1.remodel
+
+mpirun -np 4 remodel.mpi.macosclangrelease -s 4.pdb \
+-remodel:blueprint blueprint1.remodel \
+-run:chain A -remodel:num_trajectory 10 \
+-remodel:quick_and_dirty \

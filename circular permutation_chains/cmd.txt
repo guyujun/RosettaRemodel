@@ -1,0 +1,3 @@
+$ROSETTA/tools/remodel/getBluePrintFromCoords.pl -pdbfile bcl_xl.pdb -chain A > blueprint.remodel
+
+remodel.mpi.macosclangrelease -s bcl_xl.pdb -remodel:blueprint blueprint.remodel -remodel:quick_and_dirty -remodel:domainFusion:insert_segment_from_pdb DH.pdb -no_jumps

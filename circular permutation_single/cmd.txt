@@ -1,0 +1,1 @@
+remodel.mpi.macosclangrelease -s 1pga.pdb -remodel:blueprint blueprint.remodel -remodel:quick_and_dirty

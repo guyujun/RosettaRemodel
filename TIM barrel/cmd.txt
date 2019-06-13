@@ -1,0 +1,2 @@
+mpirun -np 4 remodel.mpi.macosclangrelease @genbb.flag
+
